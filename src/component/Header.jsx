@@ -4,18 +4,29 @@ import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
+const styleHeader = {
+    change: {
+        height: '25px',
+        fill: 'white',
+        cursor: 'pointer'
+    },
+    center: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+}
+
 export default function Header() {
   return (
     <div className='Header'>
-        <Navbar bg="dark" variant="dark">
+        <Navbar>
             <Container>
                 <Navbar.Brand href="#home">React Weather</Navbar.Brand>
                     <Nav className="me-auto">
-                    {/* <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link> */}
                     </Nav>
-                <Nav>
+                <Nav style={styleHeader.center}>
+                <img id='changeTheme' src="./images/changeSun.svg" alt="" style={styleHeader.change}/>
                 <NavDropdown title="Выбрать город" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Томск</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Белово</NavDropdown.Item>

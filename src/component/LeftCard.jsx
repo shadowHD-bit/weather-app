@@ -1,4 +1,5 @@
 import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 
 
@@ -10,7 +11,26 @@ const leftCardStyles = {
     },
     card: {
         width: '100%',
-        height: 'auto'
+        height: '20rem'
+    },
+    bigTemp:{
+        fontSize: '40px',
+        color: 'blue'
+    },
+    day:{
+        textAlign: 'center'
+    },
+    textDay:{
+        fontSize: '30px',
+        color: 'grey'
+    },
+    p:{
+        fontSize:'20px',
+        color:'grey'
+    },
+    span:{
+        fontSize:'22px',
+        color:'black'
     }
 }
 
@@ -19,14 +39,29 @@ export default function LeftCard() {
     <div className='leftCard' style={leftCardStyles.leftCard}>
         <Card style={leftCardStyles.card}>
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+            <Card.Title>Основная информация</Card.Title>
             <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
+                <Container>
+                    <Row>
+                        <Col md={5} style={leftCardStyles.day}>
+                            <img src="./images/left_cloud_sun.svg" alt="" />
+                            <p><span style={leftCardStyles.textDay}>Сегодня</span></p>
+
+                        </Col>
+                        <Col md={7}>
+                            <p><span style={leftCardStyles.bigTemp}>+20 °С</span></p>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Col>
+                        <p style={leftCardStyles.p}>Город: <span style={leftCardStyles.span}>Томск</span></p>
+                    </Col>
+                    <Col>
+                        <p style={leftCardStyles.p}>Время: <span style={leftCardStyles.span}>18:54</span></p>
+                    </Col>
+                </Container>
             </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
         </Card.Body>
         </Card>
     </div>
