@@ -1,0 +1,27 @@
+:root{
+    --body-background-dark: rgb(5, 6, 20);
+    --body-background-light: #fff;
+    --body-background-default: var(--body-background-light);
+
+    --text-dark: #000;
+    --text-light: rgb(130, 126, 168);
+    --text-default: var(--text-dark);
+
+    --card-background-light: rgb(218, 253, 255);
+    --card-background-dark: rgb(0, 4, 54);
+    --card-background-default: var(--card-background-light);
+}
+
+body{
+    background-color: var(--body-background-default);
+    color: var(--text-default);
+}
+
+.miniCard .card{
+    background-color: var(--card-background-default);
+    color: var(--text-default);
+}
+
+.Header{
+    color: var(--text-default);
+}

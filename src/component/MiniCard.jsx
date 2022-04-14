@@ -5,7 +5,7 @@ const styleMiniCard = {
     miniCard: {
         width: 'auto',
         height: 'auto',
-        margin: '5px'
+        margin: '5px',
     }
 }
 
