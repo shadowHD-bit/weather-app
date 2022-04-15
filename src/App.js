@@ -40,7 +40,7 @@ class App extends React.Component{
             precip: res.data.current.precip,
             pressure: res.data.current.pressure,
             humidity: res.data.current.humidity,
-            observation_time: res.data.current.observation_time,
+            localtime: res.data.location.localtime,
             img: res.data.current.weather_icons,
           }
 
@@ -67,7 +67,7 @@ class App extends React.Component{
         precip: res.data.current.precip,
         pressure: res.data.current.pressure,
         humidity: res.data.current.humidity,
-        observation_time: res.data.current.observation_time,
+        localtime: res.data.location.localtime,
         img: res.data.current.weather_icons,
       }
 

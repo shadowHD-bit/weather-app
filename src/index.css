@@ -3,19 +3,25 @@
     /* Body */
 
     --body-background-dark: rgb(5, 6, 20);
-    --body-background-light: #EBFFFA;
+    --body-background-light: #ffffff;
     --body-background-default: var(--body-background-light);
 
     /* Text */
 
-    --text-dark: #000;
+    /* imageBack */
+    --background-image-dark: url(../public/images/bg-dark.jpg);
+    --background-image-default: var(--background-image-light);
+    --background-image-light: url(../public/images/bg.jpg);
+
+
+    --text-dark: rgb(255, 255, 255);
     --text-light: rgb(48, 46, 46);
     --text-default: var(--text-light);
 
     /* Cards */
 
-    --card-background-light: #C6FCE5;
-    --card-background-dark: rgb(0, 4, 54);
+    --card-background-light: #ffffffcc;
+    --card-background-dark: rgba(0, 2, 31, 0.74);
     --card-background-default: var(--card-background-light);
 
     /* Buttons */
@@ -39,9 +45,20 @@ body{
     background-color: var(--body-background-default);
     color: var(--text-default);
     font-family: 'Comfortaa', cursive;
+    background: var(--background-image-default);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
-.miniCard .card{
+
+
+.p-2 .card{
+    background-color: var(--card-background-default);
+    color: var(--text-default);
+}
+
+.card{
     background-color: var(--card-background-default);
     color: var(--text-default);
 }
@@ -61,10 +78,14 @@ body{
     border: none;
 }
 
-.leftCard .card-body{
-    background-color: var(--card-background-default);
+.navbar{
+    color: var(--text-default) !important;
 }
 
-.Header{
-    color: var(--text-default);
+a.navbar-brand{
+    color: var(--text-default) !important;
+}
+
+span{
+    color: var(--text-default) !important; 
 }

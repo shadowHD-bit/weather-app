@@ -11,16 +11,22 @@ const rightCardStyles = {
         width: '60%',
         height: 'auto',
         padding: '10px',
+        
     },
     card: {
         width: '100%',
         height: '20rem',
         boxShadow: '0 0 7px #666',
+        borderRadius: '30px'
+
     },
     textSect:{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+    },
+    br:{
+        borderRadius: '30px'
     }
 }
 
@@ -31,8 +37,8 @@ export default function RightCards(props) {
   return (
     <div className='leftCard' style={rightCardStyles.rightCard}>
         <Card style={rightCardStyles.card}>
-        <Card.Body>
-            <Card.Title>Основные показатели</Card.Title>
+        <Card.Body style={rightCardStyles.br}>
+            <Card.Title>Main Indicators</Card.Title>
             <Card.Text style={rightCardStyles.textSect}>
                 <Temperature temperature={temperature}/>
                 <Pressure pressure = {pressure}/>

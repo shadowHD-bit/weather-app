@@ -42,7 +42,8 @@ export default function Header(props) {
         const componentstChangeStyle = [
             'card-background',
             'text',
-            'body-background'
+            'body-background',
+            'background-image'
         ];
 
         componentstChangeStyle.forEach(components => {
@@ -58,17 +59,16 @@ export default function Header(props) {
                     <Nav className="me-auto">
                     </Nav>
                 <Nav style={styleHeader.center}>
-                <i style={styleHeader.change} className="bi bi-sun" onClick={changeTheme}></i>
+                <i style={styleHeader.change} className={theme == 'dark' ? "bi bi-moon" : "bi bi-sun"} onClick={changeTheme}></i>
                 <i style={styleHeader.i}>{location} </i>
                 <Form className="d-flex" onSubmit={(e) => props.changeWeather(e)}>
                     <FormControl
                     type="search"
-                    placeholder="Search"
+                    placeholder="Enter Country"
                     className="me-2"
                     aria-label="Search"
                     onChange={(e) => props.changeLocation(e.target.value)}
                     />
-                    <Button>Search</Button>
                 </Form>      
                 </Nav>
             </Container>
