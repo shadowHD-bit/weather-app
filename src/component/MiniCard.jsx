@@ -6,6 +6,7 @@ const styleMiniCard = {
         width: 'auto',
         height: 'auto',
         margin: '5px',
+        boxShadow: '0 0 7px #666'
     }
 }
 

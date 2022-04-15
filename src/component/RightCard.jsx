@@ -6,25 +6,31 @@ import Preciritation from './ViewStatistic/Precipitation'
 import Wind from './ViewStatistic/Wind'
 
 
-const leftCardStyles = {
-    leftCard:{
+const rightCardStyles = {
+    rightCard:{
         width: '60%',
         height: 'auto',
-        padding: '10px'
+        padding: '10px',
     },
     card: {
         width: '100%',
-        height: '20rem'
+        height: '20rem',
+        boxShadow: '0 0 7px #666',
+    },
+    textSect:{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
     }
 }
 
-export default function LeftCard() {
+export default function RightCards() {
   return (
-    <div className='leftCard' style={leftCardStyles.leftCard}>
-        <Card style={leftCardStyles.card}>
+    <div className='leftCard' style={rightCardStyles.rightCard}>
+        <Card style={rightCardStyles.card}>
         <Card.Body>
             <Card.Title>Основные показатели</Card.Title>
-            <Card.Text>
+            <Card.Text style={rightCardStyles.textSect}>
                 <Temperature />
                 <Pressure />
                 <Preciritation />

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import FormControl from 'react-bootstrap/FormControl'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
@@ -11,6 +14,9 @@ const styleHeader = {
         fill: 'white',
         cursor: 'pointer'
     },
+    i:{
+        margin: '0px 15px'
+    },
     center: {
         display: 'flex',
         justifyContent: 'center',
@@ -19,7 +25,10 @@ const styleHeader = {
 }
 
 
-export default function Header() {
+export default function Header(props) {
+
+    const {location, temperature, description, region, country, wind_speed, 
+    pressure, precip, humidity, img} = (props.weatherData)
 
     const [theme, setTheme] = useState('light')
 
@@ -50,12 +59,16 @@ export default function Header() {
                     </Nav>
                 <Nav style={styleHeader.center}>
                 <i style={styleHeader.change} className="bi bi-sun" onClick={changeTheme}></i>
-                <NavDropdown title="Выбрать город" id="collasible-nav-dropdown" onClick={changeTheme}>
-                    <NavDropdown.Item href="#action/3.1">Томск</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Белово</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Кемерово</NavDropdown.Item>
-                </NavDropdown>   
-                                 
+                <i style={styleHeader.i}>{location} </i>
+                <Form className="d-flex">
+                    <FormControl
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                    />
+                    <Button>Search</Button>
+                </Form>      
                 </Nav>
             </Container>
         </Navbar>

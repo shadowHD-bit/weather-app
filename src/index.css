@@ -1,25 +1,68 @@
 :root{
+
+    /* Body */
+
     --body-background-dark: rgb(5, 6, 20);
-    --body-background-light: #fff;
+    --body-background-light: #EBFFFA;
     --body-background-default: var(--body-background-light);
 
-    --text-dark: #000;
-    --text-light: rgb(130, 126, 168);
-    --text-default: var(--text-dark);
+    /* Text */
 
-    --card-background-light: rgb(218, 253, 255);
+    --text-dark: #000;
+    --text-light: rgb(48, 46, 46);
+    --text-default: var(--text-light);
+
+    /* Cards */
+
+    --card-background-light: #C6FCE5;
     --card-background-dark: rgb(0, 4, 54);
     --card-background-default: var(--card-background-light);
+
+    /* Buttons */
+
+    --button-background-light: #87af9e;
+    --button-background-dark: rgb(0, 4, 54);
+    --button-background-default: var(--button-background-light);
+
+    --buttonActive-background-light: #6c8d7f;
+    --buttonActive-background-dark: rgb(0, 4, 54);
+    --buttonActive-background-default: var(--buttonActive-background-light);
+
+    --buttonHover-background-light: #6c8d7f;
+    --buttonHover-background-dark: rgb(0, 4, 54);
+    --buttonHover-background-default: var(--buttonHover-background-light);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 body{
     background-color: var(--body-background-default);
     color: var(--text-default);
+    font-family: 'Comfortaa', cursive;
 }
 
 .miniCard .card{
     background-color: var(--card-background-default);
     color: var(--text-default);
+}
+
+.btn{
+    background-color: var(--buttonHover-background-default);
+    border: none;
+}
+
+.btn:focus{
+    background-color: var(--buttonActive-background-default);
+    border: none;
+}
+
+.btn:hover{
+    background-color: var(--button-background-default);
+    border: none;
+}
+
+.leftCard .card-body{
+    background-color: var(--card-background-default);
 }
 
 .Header{

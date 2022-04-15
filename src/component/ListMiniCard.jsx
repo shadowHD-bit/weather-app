@@ -10,6 +10,7 @@ const styleListMiniCard = {
         justifyContent: 'space-between',
         alignItems: 'center'
     }
+    
 }
 
 export default function ListMiniCard() {

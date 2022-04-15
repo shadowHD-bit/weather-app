@@ -27,6 +27,7 @@ const temperatureStyle = {
 }
 
 export default function Temperature() {
+
   return (
     <div className='temperature' style={temperatureStyle.temperature}>
         <Col md={1} style={temperatureStyle.center}>
