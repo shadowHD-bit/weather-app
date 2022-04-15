@@ -24,17 +24,20 @@ const rightCardStyles = {
     }
 }
 
-export default function RightCards() {
+export default function RightCards(props) {
+
+    const {temperature, wind_speed, pressure, precip} = (props.data)
+
   return (
     <div className='leftCard' style={rightCardStyles.rightCard}>
         <Card style={rightCardStyles.card}>
         <Card.Body>
             <Card.Title>Основные показатели</Card.Title>
             <Card.Text style={rightCardStyles.textSect}>
-                <Temperature />
-                <Pressure />
-                <Preciritation />
-                <Wind />
+                <Temperature temperature={temperature}/>
+                <Pressure pressure = {pressure}/>
+                <Preciritation precip = {precip}/>
+                <Wind wind={wind_speed}/>
             </Card.Text>
         </Card.Body>
         </Card>

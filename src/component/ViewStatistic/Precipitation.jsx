@@ -26,14 +26,17 @@ const preciritationStyle = {
     }
 }
 
-export default function Preciritation() {
+export default function Preciritation(props) {
+
+    const precip = props.precip
+
   return (
     <div className='preciritation' style={preciritationStyle.temperature}>
         <Col md={1} style={preciritationStyle.center}>
         <img src="./images/rain.svg" alt="" style={preciritationStyle.img}/>
         </Col>
         <Col md={11}>
-        <p style={preciritationStyle.p}>Осадки: <span style={preciritationStyle.span}>Без Осадков</span></p>
+        <p style={preciritationStyle.p}>Preciritation: <span style={preciritationStyle.span}>{precip} mm</span></p>
         </Col>
     </div>
   )

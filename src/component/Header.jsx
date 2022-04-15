@@ -60,12 +60,13 @@ export default function Header(props) {
                 <Nav style={styleHeader.center}>
                 <i style={styleHeader.change} className="bi bi-sun" onClick={changeTheme}></i>
                 <i style={styleHeader.i}>{location} </i>
-                <Form className="d-flex">
+                <Form className="d-flex" onSubmit={(e) => props.changeWeather(e)}>
                     <FormControl
                     type="search"
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
+                    onChange={(e) => props.changeLocation(e.target.value)}
                     />
                     <Button>Search</Button>
                 </Form>      

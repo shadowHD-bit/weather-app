@@ -21,7 +21,7 @@ export default function ListApp(props) {
     <div className='listApp'>
         <Container className='mt-5' style={listAppStyles.listApp}>
             <LeftCard data = {{temperature, location, img, observation_time}}/>
-            <RightCard />
+            <RightCard data = {{wind_speed, pressure, precip, temperature}}/>
         </Container>
         <Container>
             <ButtonList />

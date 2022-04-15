@@ -26,14 +26,17 @@ const windStyle = {
     }
 }
 
-export default function Wind() {
+export default function Wind(props) {
+
+    const wind = props.wind
+
   return (
     <div className='wind' style={windStyle.temperature}>
         <Col md={1} style={windStyle.center}>
             <img src="./images/wind.svg" alt="" style={windStyle.img}/>
         </Col>
         <Col md={11}>
-            <p style={windStyle.p}>Ветер: <span style={windStyle.span}>3 м/c</span></p>
+            <p style={windStyle.p}>Wind Speed: <span style={windStyle.span}>{wind} km/hr</span></p>
         </Col>
     </div>
   )

@@ -26,7 +26,8 @@ const temperatureStyle = {
     }
 }
 
-export default function Temperature() {
+export default function Temperature(props) {
+    const temperature = (props.temperature)
 
   return (
     <div className='temperature' style={temperatureStyle.temperature}>
@@ -34,7 +35,7 @@ export default function Temperature() {
         <img src="./images/temp.svg" alt="" style={temperatureStyle.img}/> 
         </Col>
         <Col md={11}>
-        <p style={temperatureStyle.p}>Температура: <span style={temperatureStyle.span}>40 °С</span></p>
+        <p style={temperatureStyle.p}>Temperature: <span style={temperatureStyle.span}>{temperature} °С</span></p>
         </Col>
     </div>
   )
