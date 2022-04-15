@@ -60,7 +60,7 @@ export default function Header(props) {
                     </Nav>
                 <Nav style={styleHeader.center}>
                 <i style={styleHeader.change} className={theme == 'dark' ? "bi bi-moon" : "bi bi-sun"} onClick={changeTheme}></i>
-                <i style={styleHeader.i}>{location} </i>
+                <i className='loc' style={styleHeader.i}>{location} </i>
                 <Form className="d-flex" onSubmit={(e) => props.changeWeather(e)}>
                     <FormControl
                     type="search"

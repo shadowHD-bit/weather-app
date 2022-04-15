@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 const infoStyles = {
     card:{
         width: '100%',
-        height: '20rem',
+        height: 'auto',
         boxShadow: '0 0 7px #666',
         borderRadius: '30px'
     },

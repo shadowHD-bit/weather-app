@@ -89,3 +89,112 @@ a.navbar-brand{
 span{
     color: var(--text-default) !important; 
 }
+
+/* Media */
+
+@media screen  and (max-width: 992px){
+    .leftCard{
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .mt-5{
+        flex-direction: column !important;
+    }
+
+    p.pt-3 span{
+        font-size: 60px !important;
+        padding-left: 110px;
+    }
+
+    .infos{
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .card-text{
+        margin-top: 30px;
+    }
+}
+
+@media screen  and (max-width: 768px){
+    .leftCard{
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .mt-5{
+        flex-direction: column !important;
+    }
+
+    img{
+        display: none;
+    }
+
+    p.pt-3 span{
+        font-size: 40px !important;
+        padding-left: 150px;
+    }
+
+    .mainInfos{
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .infos{
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .card-text{
+        margin-top: 30px;
+    }
+
+    .loc{
+        display: none;
+    }
+    .navbar-nav i {
+        margin-right: 10px;
+    }
+}
+
+@media screen  and (max-width: 400px){
+    .leftCard{
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .mt-5{
+        flex-direction: column !important;
+    }
+
+    img{
+        display: none;
+    }
+
+    p.pt-3 span{
+        font-size: 40px !important;
+        padding-left: 90px;
+    }
+
+    .mainInfos{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .infos{
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .card-text{
+        margin-top: 30px;
+    }
+
+    .loc{
+        display: none;
+    }
+    .navbar-nav i {
+        margin-right: 10px;
+    }
+}

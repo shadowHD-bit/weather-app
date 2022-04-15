@@ -58,7 +58,7 @@ export default function LeftCard(props) {
         <Card.Body style={leftCardStyles.br}>
             <Card.Title>Main Information</Card.Title>
             <Card.Text>
-                <Container>
+                <Container className='mainInfos'>
                     <Row>
                         <Col md={5} style={leftCardStyles.day}>
                             <img style={leftCardStyles.img} src={img} alt="" />
@@ -69,7 +69,7 @@ export default function LeftCard(props) {
                         </Col>
                     </Row>
                 </Container>
-                <Container>
+                <Container className='infos'>
                     <Col>
                         <p style={leftCardStyles.p}>Location: <span style={leftCardStyles.span}>{location}</span></p>
                     </Col>
